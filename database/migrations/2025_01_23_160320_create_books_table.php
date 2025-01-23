@@ -17,10 +17,10 @@ return new class extends Migration
             $table->string('name');
             $table->foreignId('book_category_id')
                 ->constrained('book_categories')
-                ->nullOnDelete();
+                ->cascadeOnDelete();
             $table->foreignId('book_shelf_id')
                 ->constrained('book_shelves')
-                ->nullOnDelete();
+                ->cascadeOnDelete();
             $table->longText('description')->nullable();
             $table->string('image')->nullable();
             $table->timestamps();
