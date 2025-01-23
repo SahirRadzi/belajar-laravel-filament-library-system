@@ -35,7 +35,7 @@ class BookResource extends Resource
                 Forms\Components\Select::make('book_shelf_id')
                     ->relationship('bookShelf', 'name')
                     ->required(),
-                Forms\Components\MarkdownEditor::make('description')
+                Forms\Components\RichEditor::make('description')
                     ->columnSpanFull(),
                 Forms\Components\FileUpload::make('image')
                     ->image(),
